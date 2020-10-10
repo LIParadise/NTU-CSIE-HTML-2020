@@ -26,6 +26,11 @@ $$\mathbb{P}{ \llbracket \lvert S-\mu \rvert \geq \epsilon \rrbracket \leq 2 \cd
   - How to describe a *good* data selection?
     > 如果你假設這個 Data 是這個隨機而獨立地從這個罐子裏面做若干的抽樣的話, 那麼這個資料就代表了一把橘色或者是綠色的彈珠, 就跟我們剛才左邊在做的事情一樣。
     Define $\text{i.i.d.} ~ \{x_i\}$?
+  - Under what circumstance do such probablistic statement work?
 - Definition of $E_\text{out}$
   - $\underset{x \sim P}{\varepsilon}{ \llbracket h(x) \neq f(x) \rrbracket}$
     - If $\varepsilon$ is used as operator of "taking expected value", what do you mean by $x \sim P$?
+    - Taking expected value could be represented as $\varepsilon \llbracket P \rrbracket$, isn't it?
+- About verification versus learning...
+  - Knowing that Hoeffding's inequality statement works for single $h$, why does this bother our learning?
+    - Yep, we're using different $h$ in our algorithms like PLA, but don't we effectively "verified" all of them, that is, checked their error rate on $D$ on all of them?
