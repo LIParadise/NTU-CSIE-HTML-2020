@@ -37,11 +37,11 @@ That $y_n w^{T}_{t+1} x_n \geq y_n w^{T}_{t} x_n$ suggests the calculated result
 ### Proof
 
 Proposition: (slide 02_handout.pdf 14/22 ~ 15/22)
-Given *linear separable* set $D$, the PLA is guaranteed to halt within $\frac{R}{d}$ moves, where $R\overset{\Delta}{=} \max\limits_{\bar{x}_n \in D}{\lVert \bar{x}_n\rVert}$, $d\overset{\Delta}{=} \min\limits_{\bar{x}_n \in D}{y_n \frac{\bar{w}_f^T}{ \lVert \bar{w}_f \rVert}\bar{x}_n}$, and $\bar{w}_f$ being such that $d>0$.
+Given *linear separable* set $D$, the PLA is guaranteed to halt within ${ \left( \frac{R}{d} \right) }^2$ moves, where $R\overset{\Delta}{=} \max\limits_{\bm{x}_n \in D}{\lVert \bm{x}_n\rVert}$, $d\overset{\Delta}{=} \min\limits_{\bm{x}_n \in D}{y_n \frac{\bm{w}_f^T}{ \lVert \bm{w}_f \rVert}\bm{x}_n}$, and $\bm{w}_f$ being such that $d>0$.
 
-Notice we have $$\bar{w}_f^T w_{t+1} \geq \bar{w}_f^T w_{t} + \min\limits_{\bar{x}_n \in D}{y_n \bar{w}_f^T \bar{x}_n} = \bar{w}_f^T w_{t} + \lVert \bar{w}_f \rVert \times d \\ \implies \bar{w}_f^T w_{t+1} \geq t\times d \times \lVert \bar{w}_f \rVert$$ let's call it formula 1.
-We also have that $${\lVert \bar{w}_{t+1} \rVert}^2 \leq {\lVert \bar{w}_{t} \rVert}^2 + R^2 \implies {\lVert \bar{w}_{t+1} \rVert}^2 \leq t\times R^2$$ let's call it formula 2.
-Turn $\text{LHS}$ of formula 1 into unit vectors, we have $$1 \geq \frac{ \bar{w}_f^T w_{t+1}}{ \lVert \bar{w}_f \rVert \lVert w_{t+1} \rVert} \geq \frac{d\sqrt{t}}{R}$$
+Notice we have $$\bm{w}_f^T \bm{w}_{t+1} \geq \bm{w}_f^T \bm{w}_{t} + \min\limits_{\bm{x}_n \in D}{y_n \bm{w}_f^T \bm{x}_n} = \bm{w}_f^T w_{t} + \lVert \bm{w}_f \rVert \times d \\ \implies \bm{w}_f^T \bm{w}_{t+1} \geq t\times d \times \lVert \bm{w}_f \rVert$$ let's call it formula 1.
+We also have that $${\lVert \bm{w}_{t+1} \rVert}^2 \leq {\lVert \bm{w}_{t} \rVert}^2 + R^2 \implies {\lVert \bm{w}_{t+1} \rVert}^2 \leq t\times R^2$$ let's call it formula 2.
+Turn $\text{LHS}$ of formula 1 into unit vectors, we have $$1 \geq \frac{ \bm{w}_f^T \bm{w}_{t+1}}{ \lVert \bm{w}_f \rVert \lVert \bm{w}_{t+1} \rVert} \geq \frac{d\sqrt{t}}{R}$$
 Hence at most PLA takes $\dfrac{R^2}{d^2}$ times to complete.<div style="text-align: right">$\square$</div>
 
 ## Non-Linear-Separable Data?
@@ -52,5 +52,5 @@ Hence at most PLA takes $\dfrac{R^2}{d^2}$ times to complete.<div style="text-al
 ## Question
 
 - (slide 02_handout.pdf 12/22)
-  Shall be first take transpose: $w_{t+1}^{T} \leftarrow w_{t}^T + y_n\bar{x}_n$
-  And then multiply both side with $y_n \bar{x}_n$?
+  Shall be first take transpose: $w_{t+1}^{T} \leftarrow w_{t}^T + y_n\bm{x}_n$
+  And then multiply both side with $y_n \bm{x}_n$?
